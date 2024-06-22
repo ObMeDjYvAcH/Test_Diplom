@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Комп'ютерна Техніка</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        nav {
+            background-color: #121212;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #ebebeb;
+            color: #555;
+        }
+
+        .container {
+            text-align: center;
+            max-height: 100vh;
+            overflow-y: auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .item {
+            background-color: #1e1e1e;
+            padding: 20px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-size: 1.5em;
+        }
+
+        .item:hover {
+            background-color: #333333;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        li {
+            background-color: #1e1e1e;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        li:hover {
+            background-color: #333333;
+        }
+
+        li ul {
+            background-color: #333333;
+            padding-left: 20px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        li ul li {
+            font-size: 0.9em;
+            padding: 8px;
+        }
+
+        li ul li:hover {
+            background-color: #444444;
+        }
+
+        footer {
+        background-color: #121212; /* колір фону футера */
+        color: #fff; 
+        padding: 20px; 
+        text-align: center; 
+    }
+    footer {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 10px;
+        background-color: #121212;
+    }
+    </style>
+    <script>
+        function toggleList(id) {
+            const element = document.getElementById(id);
+            if (element.classList.contains('hidden')) {
+                element.classList.remove('hidden');
+            } else {
+                element.classList.add('hidden');
+            }
+        }
+
+        function toggleSubList(id) {
+            const element = document.getElementById(id);
+            if (element.classList.contains('hidden')) {
+                element.classList.remove('hidden');
+            } else {
+                element.classList.add('hidden');
+            }
+            event.stopPropagation(); // Запобігаємо поширенню події на батьківські елементи
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="./index.html">Основна сторінка</a></li>
+                <li><a href="./offers.html">Пропозиції</a></li>
+                <li><a href="./constructor.html">Рекомендації</a></li>
+                <li><a href="./useful_information.html">Корисна інформація</a></li>
+            </ul>
+        </nav>
+        <h1>Комп'ютерна Техніка</h1>
+        <div class="item" onclick="toggleList('cpu-list')">Процесор</div>
+        <ul id="cpu-list" class="hidden">
+            <li onclick="toggleSubList('cpu-1-sublist')">Intel Core i3-10100
+                <ul id="cpu-1-sublist" class="hidden">
+                    <li>Відеокарта: NVIDIA GeForce GTX 1650 Super</li>
+                    <li>Материнська плата: MSI B460M-A PRO</li>
+                    <li>Оперативна пам'ять: Corsair Vengeance LPX 16 ГБ (2 x 8 ГБ) DDR4-3200</li>
+                    <li>Блок живлення: EVGA 500 W1, 80+ WHITE 500W</li>
+                    <li>Накопичувач: Kingston A2000 500 ГБ NVMe SSD</li>
+                </ul>
+            </li>
+            <li onclick="toggleSubList('cpu-2-sublist')">Intel Core i3-12100
+                <ul id="cpu-2-sublist" class="hidden">
+                    <li>Відеокарта: NVIDIA GeForce GTX 1660 Super</li>
+                    <li>Материнська плата: ASUS Prime H510M-K</li>
+                    <li>Оперативна пам'ять: G.Skill Ripjaws V Series 16 ГБ (2 x 8 ГБ) DDR4-3600</li>
+                    <li>Блок живлення: Seasonic S12III 500W, 80+ Bronze 500W</li>
+                    <li>Накопичувач: Crucial P2 1 ТБ NVMe SSD</li>
+                </ul>
+            </li>
+            <li onclick="toggleSubList('cpu-3-sublist')">Intel Core i5-10400F 
+                <ul id="cpu-3-sublist" class="hidden">
+                    <li>Відеокарта: NVIDIA GeForce GTX 1660 Super</li>
+                    <li>Материнська плата: ASUS Prime B460M-A</li>
+                    <li>Оперативна пам'ять: Corsair Vengeance LPX 16 ГБ (2 x 8 ГБ) DDR4-3200</li>
+                    <li>Блок живлення: EVGA 600 W1, 80+ WHITE 600W</li>
+                    <li>Накопичувач: Crucial MX500 1 ТБ SATA SSD</li>
+                </ul>
+            </li>
+            <li onclick="toggleSubList('cpu-4-sublist')">Intel Core i5-12600K
+                <ul id="cpu-4-sublist" class="hidden">
+                    <li>Відеокарта: NVIDIA GeForce RTX 3060 Ti</li>
+                    <li>Материнська плата: ASUS ROG Strix Z690-E Gaming WiFi </li>
+                    <li>Оперативна пам'ять: G.Skill Trident Z RGB 32 ГБ (2 x 16 ГБ) DDR5-5200</li>
+                    <li>Блок живлення: Seasonic Focus GX-850, 80+ Gold 850W </li>
+                    <li>Накопичувач: Samsung 980 PRO 1 ТБ NVMe SSD</li>
+                </ul>
+            </li>
+            <li onclick="toggleSubList('cpu-5-sublist')">Intel Core i7-10700 
+                <ul id="cpu-5-sublist" class="hidden">
+                    <li>Відеокарта: NVIDIA GeForce RTX 3070</li>
+                    <li>Материнська плата: ASUS ROG Strix Z590-E Gaming WiFi </li>
+                    <li>Оперативна пам'ять: Corsair Vengeance RGB Pro 32 ГБ (2 x 16 ГБ) DDR4-3600 </li>
+                    <li>Блок живлення: Corsair RM850x, 80+ Gold 850W  </li>
+                    <li>Накопичувач: Samsung 970 EVO Plus 1 ТБ NVMe SSD</li>
+                </ul>
+            </li>
+            <li onclick="toggleSubList('cpu-6-sublist')">Intel Core i7-12700K
+                <ul id="cpu-6-sublist" class="hidden">
+                    <li>Відеокарта: NVIDIA GeForce RTX 3080</li>
+                    <li>Материнська плата: ASUS ROG Strix Z690-E Gaming WiFi </li>
+                    <li>Оперативна пам'ять: G.Skill Trident Z RGB 32 ГБ (2 x 16 ГБ) DDR5-4800</li>
+                    <li>Блок живлення: Seasonic Prime TX-850, 80+ Titanium 850W </li>
+                    <li>Накопичувач: Samsung 980 PRO 2 ТБ NVMe SSD </li>
+                </ul>
+            </li>
+            <!-- Додайте сюди подібні рядки для інших процесорів -->
+        </ul>
+        <div class="item" onclick="toggleList('gpu-list')">Відеокарта</div>
+        <ul id="gpu-list" class="hidden">
+            <li onclick="toggleSubList('gpu-1-sublist')">NVIDIA GeForce GTX 1650 
+                <ul id="gpu-1-sublist" class="hidden">
+                    <li>Процесор: Intel Core i5-11400</li>
+                    <li>Материнська плата: ASUS Prime B560M-A</li>
+                    <li>Оперативна пам'ять: Crucial Ballistix 16 ГБ (2 x 8 ГБ) DDR4-3200</li>
+                    <li>Блок живлення: Corsair CX550M, 80+ Bronze 550W</li>
+                    <li>Накопичувач: Kingston A2000 500 ГБ NVMe SSD </li>
+                </ul>
+            </li>
+            <li onclick="toggleSubList('gpu-2-sublist')">NVIDIA GeForce GTX 1650 Super 
+                <ul id="gpu-2-sublist" class="hidden">
+                    <li>Процесор: Intel Core i5-11400F</li>
+                    <li>Материнська плата: MSI MAG B560M Bazooka</li>
+                    <li>Оперативна пам'ять: Corsair Vengeance LPX 16 ГБ (2 x 8 ГБ) DDR4-3200</li>
+                    <li>Блок живлення: EVGA 600 W1, 80+ WHITE 600W </li>
+                    <li>Накопичувач: Crucial MX500 1 ТБ SATA SSD </li>
+                </ul>
+            </li>
+            <li onclick="toggleSubList('gpu-3-sublist')"> NVIDIA GeForce RTX 3060
+                <ul id="gpu-3-sublist" class="hidden">
+                    <li>Процесор: Intel Core i5-11600K</li>
+                    <li>Материнська плата: ASUS ROG Strix Z590-A Gaming WiFi</li>
+                    <li>Оперативна пам'ять: Corsair Vengeance RGB Pro 16 ГБ (2 x 8 ГБ) DDR4-3600</li>
+                    <li>Блок живлення: Seasonic Focus GX-750, 80+ Gold 750W</li>
+                    <li>Накопичувач: Samsung 970 EVO Plus 1 ТБ NVMe SSD </li>
+                </ul>
+            </li>
+            <li onclick="toggleSubList('gpu-4-sublist')"> NVIDIA GeForce RTX 3060 Ti
+                <ul id="gpu-4-sublist" class="hidden">
+                    <li>Процесор: Intel Core i5-12600K</li>
+                    <li>Материнська плата: ASUS ROG Strix Z690-E Gaming WiFi </li>
+                    <li>Оперативна пам'ять: G.Skill Trident Z RGB 32 ГБ (2 x 16 ГБ) DDR5-4800</li>
+                    <li>Блок живлення: Corsair RM850x, 80+ Gold 850W</li>
+                    <li>Накопичувач: Samsung 980 PRO 1 ТБ NVMe SSD </li>
+                </ul>
+            </li>
+            <li onclick="toggleSubList('gpu-5-sublist')"> NVIDIA GeForce RTX 3080
+                <ul id="gpu-5-sublist" class="hidden">
+                    <li>Процесор: Intel Core i7-12700K</li>
+                    <li>Материнська плата: ASUS ROG Maximus Z690 Hero</li>
+                    <li>Оперативна пам'ять: Corsair Vengeance RGB Pro 32 ГБ (2 x 16 ГБ) DDR5-5200</li>
+                    <li>Блок живлення: Seasonic Prime TX-1000, 80+ Titanium 1000W</li>
+                    <li>Накопичувач: Samsung 980 PRO 2 ТБ NVMe SSD </li>
+                </ul>
+            </li>
+            <li onclick="toggleSubList('gpu-6-sublist')"> NVIDIA GeForce RTX 3090
+                <ul id="gpu-6-sublist" class="hidden">
+                    <li>Процесор: Intel Core i9-12900K</li>
+                    <li>Материнська плата: ASUS ROG Maximus Z690 Extreme</li>
+                    <li>Оперативна пам'ять: G.Skill Trident Z Royal 64 ГБ (4 x 16 ГБ) DDR5-6400</li>
+                    <li>Блок живлення: Corsair AX1600i, 80+ Titanium 1600W</li>
+                    <li>Накопичувач: Samsung 980 PRO 2 ТБ NVMe SSD </li>
+                </ul>
+            </li>
+            <!-- Додайте сюди подібні рядки для інших відеокарт -->
+        </ul>
+        <div class="item" onclick="toggleList('motherboard-list')">Материнська Плата</div>
+        <ul id="motherboard-list" class="hidden">
+            <li onclick="toggleSubList('mb-1-sublist')">ASUS TUF Gaming B560M-Plus WiFi
+                <ul id="mb-1-sublist" class="hidden">
+                    <li>Процесор: Intel Core i5-11400</li>
+                    <li>Відеокарта: NVIDIA GeForce RTX 3060</li>
+                    <li>Блок живлення: Corsair CX650M, 80+ Bronze 650W</li>
+                    <li>Оперативна пам'ять: Corsair Vengeance LPX 16 ГБ (2 x 8 ГБ) DDR4-3200</li>
+                    <li>Накопичувач: Crucial MX500 1 ТБ SATA SSD </li>
+                </ul>
+            </li>
+            <li onclick="toggleSubList('mb-2-sublist')">MSI MAG B560 TOMAHAWK WIFI
+                <ul id="mb-2-sublist" class="hidden">
+                    <li>Процесор: Intel Core i5-11600K</li>
+                    <li>Відеокарта: NVIDIA GeForce RTX 3060 Ti </li>
+                    <li>Блок живлення: EVGA SuperNOVA 750 G5, 80+ Gold 750W</li>
+                    <li>Оперативна пам'ять: Corsair Vengeance LPX 16 ГБ (2 x 8 ГБ) DDR4-3200</li>
+                    <li>Накопичувач: Samsung 970 EVO Plus 1 ТБ NVMe SSD </li>
+                </ul>
+            </li>
+            <li onclick="toggleSubList('mb-3-sublist')">GIGABYTE B560M DS3H AC
+                <ul id="mb-3-sublist" class="hidden">
+                    <li>Процесор: Intel Core i5-11400F</li>
+                    <li>Відеокарта: NVIDIA GeForce RTX 3060 </li>
+                    <li>Блок живлення: Corsair CV550, 80+ Bronze 550W</li>
+                    <li>Оперативна пам'ять: Kingston HyperX Fury 16 ГБ (2 x 8 ГБ) DDR4-3200</li>
+                    <li>Накопичувач: Crucial MX500 500 ГБ SATA SSD  </li>
+                </ul>
+            </li>
+            <li onclick="toggleSubList('mb-4-sublist')">ASRock B560 Steel Legend
+                <ul id="mb-4-sublist" class="hidden">
+                    <li>Процесор: Intel Core i5-11600K</li>
+                    <li>Відеокарта: NVIDIA GeForce RTX 3060 Ti</li>
+                    <li>Блок живлення: Corsair RM650x, 80+ Gold 650W</li>
+                    <li>Оперативна пам'ять: G.Skill Ripjaws V 16 ГБ (2 x 8 ГБ) DDR4-3600</li>
+                    <li>Накопичувач: Samsung 970 EVO Plus 1 ТБ NVMe SSD </li>
+                </ul>
+            </li>
+            <li onclick="toggleSubList('mb-5-sublist')">MSI MPG Z490 GAMING PLUS
+                <ul id="mb-5-sublist" class="hidden">
+                    <li>Процесор: Intel Core i7-10700K </li>
+                    <li>Відеокарта: NVIDIA GeForce RTX 3070 </li>
+                    <li>Блок живлення: Corsair RM750x, 80+ Gold 750W</li>
+                    <li>Оперативна пам'ять: Corsair Vengeance RGB Pro 32 ГБ (2 x 16 ГБ) DDR4-3200 </li>
+                    <li>Накопичувач: Samsung 970 EVO Plus 1 ТБ NVMe SSD</li>
+                </ul>
+            </li>
+            <!-- Додайте сюди подібні рядки для інши   х материнських плат -->
+        </ul>
+        <footer>
+            <p>Gmail: example@gmail.com</p>
+            <p>Телефон: +123456789</p>
+            <p>&copy;Усі права захищені</p>
+        </footer>
+    </div>
+</body>
+</html>

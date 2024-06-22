@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основна сторінка</title>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif; 
+        background-color: #121212; 
+        color: #fff; 
+    }
+    .container {
+        width: 1000px;
+        margin: 0 auto; 
+        background-color: #222; 
+        padding: 20px;
+        color: #fff; 
+        font-size: 16px; 
+    }
+    nav {
+        background-color: #222; 
+        color: #fff; 
+        padding: 10px 0;
+        text-align: center;
+    }
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex; 
+        justify-content: center; 
+    }
+    nav ul li {
+        margin-right: 20px; 
+    }
+    nav ul li:last-child {
+        margin-right: 0; 
+    }
+    nav ul li a {
+        color: #fff; 
+        text-decoration: none; 
+        padding: 10px 20px; 
+        border: 2px solid #fff; 
+        border-radius: 5px; 
+        transition: background-color 0.3s ease, color 0.3s ease; 
+    }
+    nav ul li a:hover {
+        background-color: #fff; 
+        color: #333; 
+    }
+
+    /* стилізування карток  */
+    .card {
+        background-color: #333; 
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(255,255,255,0.1);
+        padding: 20px;
+        margin-top: 20px;
+        display: flex; 
+        align-items: center; 
+    }
+    .card-content {
+        flex: 1; 
+        margin: 10px;
+    }
+    .card-title {
+        font-size: 24px;
+        text-align: center; 
+        margin-bottom: 10px;
+    }
+    .card-description {
+        margin-bottom: 10px;
+        font-size: 18px; 
+    }
+    .card-image {
+        width: 300px; 
+        height: 300px;
+        margin-left: auto; 
+        margin-top: 0; 
+        margin-bottom: 0; 
+        transition: transform 0.3s ease; 
+    }
+    .card-image:hover {
+        transform: scale(1.2); 
+    }
+    /* футер */
+    footer {
+        background-color: #222; /* колір фону футера */
+        color: #fff; 
+        padding: 20px; 
+        text-align: center; 
+    }
+    footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    footer ul li {
+        margin-bottom: 10px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Основна сторінка</a></li>
+                <li><a href="./offers.html">Пропозиції</a></li>
+                <li><a href="./constructor.html">Рекомендації</a></li>
+                <li><a href="./useful_information.html">Корисна інформація</a></li>
+            </ul>
+        </nav>
+        <!-- Процесор -->
+        <div class="card">
+            <div class="card-content">
+                <div class="card-title">Процесор</div>
+                <div class="card-description">
+                    <p>Процесор для ПК - це "мозок" комп'ютера, 
+                    який відповідає за обробку інформації та виконання завдань.
+                    Швидкість процесора вимірюється в гігагерцах (GHz) і показує, 
+                    наскільки швидко він може виконувати операції.
+                    Кількість ядер в процесорі визначає, 
+                    скільки завдань він може виконати одночасно, що впливає на продуктивність комп'ютера.  
+                    </p>
+                </div>
+            </div>
+            <img src="./img/pick_for_index_html/processor.webp" alt="Процесор" class="card-image">
+        </div>
+        <!-- Відеокарта -->
+        <div class="card">
+            <div class="card-content">
+                <div class="card-title">Відеокарта</div>
+                <div class="card-description">
+                    <p>Відеокарта - це частина комп'ютера, яка відповідає за обробку графіки 
+                        та відтворення зображень на моніторі. 
+                        Вона є ключовою для геймінгу, відеомонтажу, анімації та інших завдань, 
+                        які потребують відображення великої кількості графічних даних. 
+                        Хоча для базових завдань, таких як робота з текстовими документами 
+                        чи перегляд веб-сторінок, вона може бути не такою критичною, 
+                        але для більш вимогливих сценаріїв вона є необхідною 
+                        для забезпечення плавності та якості зображення.</p>
+                </div>
+            </div>
+            <img src="./img/pick_for_index_html/video_card.jpg" alt="Відеокарта" class="card-image">
+        </div>
+        <!-- Материнська плата -->
+        <div class="card">
+            <div class="card-content">
+                <div class="card-title">Материнська плата</div>
+                <div class="card-description">
+                    <p>Материнська плата - це основна плата у комп'ютері, на якій розміщені інші компоненти, 
+                        такі як процесор, пам'ять, відеокарта та інші. 
+                        Вона відіграє ключову роль у забезпеченні взаємодії між різними частинами комп'ютера 
+                        та передачі даних між ними. Материнська плата також має порти для підключення 
+                        різноманітних пристроїв, таких як USB, HDMI, Ethernet, що робить її центром комунікацій 
+                        для всього комп'ютера. Вибір материнської плати важливий, оскільки він визначає сумісність 
+                        і можливості вашої системи, а також впливає на розширені можливості у майбутньому.</p>
+                </div>
+            </div>
+            <img src="./img/pick_for_index_html/mother_board.png" alt="Материнська плата" class="card-image">
+        </div>
+        <!-- Оперативна пам'ять -->
+        <div class="card">
+            <div class="card-content">
+                <div class="card-title">Оперативна пам'ять</div>
+                <div class="card-description">
+                    <p>Оперативна пам'ять - це один із ключових компонентів комп'ютера, 
+                        який використовується для тимчасового зберігання даних, з якими працює програмне забезпечення 
+                        в поточний момент. Вона забезпечує швидкий доступ до цих даних для процесора, 
+                        що дозволяє швидше виконувати завдання. Оперативна пам'ять використовується 
+                        під час запуску програм, гри або редагування великих файлів, і впливає на 
+                        загальну продуктивність комп'ютера.</p>
+                </div>
+            </div>
+            <img src="./img/pick_for_index_html/RAM.jpg" alt="Оперативна пам'ять" class="card-image">
+        </div>
+        <!-- hdd -->
+        <div class="card">
+            <div class="card-content">
+                <div class="card-title">Жорсткий диск</div>
+                <div class="card-description">
+                    <p>Жорсткий диск (HDD) - це пристрій зберігання даних, що використовується у комп'ютерах. 
+                        Він має рухомі частини, які обертаються для зберігання та читання інформації. 
+                        HDD зазвичай мають велику ємність і використовуються для зберігання великих обсягів даних, 
+                        таких як файли, фотографії та відео.</p>
+                </div>
+            </div>
+            <img src="./img/pick_for_index_html/HDD.webp" alt="Жорсткий диск" class="card-image">
+        </div>
+        <!-- ssd -->
+        <div class="card">
+            <div class="card-content">
+                <div class="card-title">Твердотільний накопичувач</div>
+                <div class="card-description">
+                    <p>Твердотільний накопичувач (SSD) - це пристрій зберігання даних, що не має рухомих частин. 
+                        Він базується на флеш-пам'яті і забезпечує швидший доступ до даних порівняно з HDD. 
+                        SSD часто використовуються для підвищення продуктивності комп'ютера, 
+                        прискорення завантаження операційної системи та програм, 
+                        а також для зберігання чутливих даних.</p>
+                </div>
+            </div>
+            <img src="./img/pick_for_index_html/SSD.jpg" alt="Твердотільний накопичувач" class="card-image">
+        </div>
+        <!--Блок живлення  -->
+        <div class="card">
+            <div class="card-content">
+                <div class="card-title">Блок живлення</div>
+                <div class="card-description">
+                    <p>Блок живлення - це пристрій, який постачає електроенергію до всіх компонентів комп'ютера.</p>
+                </div>
+            </div>
+            <img src="./img/pick_for_index_html/power_block.png" alt="Блок живлення" class="card-image">
+        </div>
+        <!-- футер -->
+        <footer>
+            <ul>
+                <li>Gmail: example@gmail.com</li>
+                <li>Телефон: +123456789</li>
+            </ul>
+            <p>&copy;Усі права захищені</p>
+        </footer>
+    </div>
+</body>
+</html>

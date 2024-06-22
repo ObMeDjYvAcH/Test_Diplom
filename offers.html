@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb; /* Більш світлий колір фону */
+    color: #555; /* Колір тексту */
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+nav {
+    background-color: #555; 
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ebebeb; /* Світлий колір при наведенні на посилання */
+    color: #555;
+}
+
+footer {
+    background-color: #888; 
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+/* Стилізація для простого рядка пошуку */
+.search-bar {
+    margin: 20px auto;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center; 
+}
+
+.search-bar input[type="text"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 5px;
+    background-color: #fff; /* Світлий колір для введення тексту */
+    color: #333; /* Колір тексту */
+}
+
+.search-bar button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+/* Стилізація для блоку вибору */
+.filter-select {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-top: 20px;
+}
+
+.filter-select select {
+    margin-left: 10px;
+    padding: 5px;
+}
+
+/* Стилізація для блоку карток */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.card {
+    width: calc(32.33% - 20px);
+    background-color: #fff; /* Світлий колір фону */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.card ul {
+    padding-left: 20px;
+    font-size: 16px;
+}
+    </style>
+
+    <script src="./offers.js">
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="./index.html">Основна сторінка</a></li>
+                <li><a href="#">Пропозиції</a></li>
+                <li><a href="./constructor.html">Рекомендації</a></li>
+                <li><a href="./useful_information.html">Корисна інформація</a></li>
+            </ul>
+        </nav>
+    
+        <!-- пошукове поле -->
+        <div class="search-bar">
+            <input type="text" placeholder="Введіть текст для пошуку">
+            <button type="submit">Пошук</button>
+        </div>
+
+        <div class="filter-select">
+            <span>Фільтр:</span>
+            <select name="filter">
+                <option value="">Оберіть пропозицію</option>
+                <option value="Процесор">Процесор</option>
+                <option value="Відеокарта">Відеокарта</option>
+                <option value="HDD">HDD</option>
+                <option value="SSD">SSD</option>
+                <option value="Блок живлення">Блок живлення</option>
+                <option value="Материнська плата">Материнська плата</option>
+                <option value="Оперативна пам'ять">Оперативна пам'ять</option>
+                <option value="Корпус">Корпус</option>
+                <option value="Система охолодження">Система охолодження</option>
+            </select>
+        </div>
+    
+
+        <!-- Блок з картками  -->
+        <div class="cards-container">
+            <!-- Початок першої картки -->
+            <div class="card">
+                <img src="./img/video_card/3050.jpg" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+            <!-- Кінець першої картки -->
+            
+            <div class="card">
+                <img src="./img/video_card/3060.jpg" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/video_card/3070.jpg" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/video_card/3060_ti.webp" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+            <!-- Кінець першої картки -->
+            
+            <div class="card">
+                <img src="./img/video_card/3070_ti.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/processor/intel_core_i511400F.webp" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Процесор</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/processor/intel_core_i512400F.jpg" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Процесор</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+            <!-- Кінець першої картки -->
+            
+            <div class="card">
+                <img src="./img/processor/intel_core_i510400F.jpg" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Процесор</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/processor/intel_core_i712400F.jpg" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Процесор</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="./img/pick_for_index_html/test.png" width="303.3" height="303.3" alt="Зображення 1">
+                <h3>Відеокарта</h3>
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li>Елемент 4</li>
+                    <li>Елемент 5</li>
+                </ul>
+            </div>
+            
+            <!-- Аналогічно додайте ще 35 карток тут -->
+    
+        </div>
+    
+        <footer>
+            <ul>
+                <li>Gmail: example@gmail.com</li>
+                <li>Телефон: +123456789</li>
+            </ul>
+            <p>&copy; Усі права захищені</p>
+        </footer>
+    </div>
+    
+</body>
+</html>
